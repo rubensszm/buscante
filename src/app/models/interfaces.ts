@@ -2,10 +2,10 @@ export interface Livro {
     title?:               string;
     authors?:             string[];
     publisher?:           string;
-    publishedDate?:       Date;
+    publishedDate?:       string;
     description?:         string;
     previewLink?:         string;
-    thumbnail?:           string;
+    thumbnail?:           ImageLinks;
 }
 
 export interface AccessInfo {
@@ -46,7 +46,7 @@ export interface VolumeInfo {
     title:               string;
     authors:             string[];
     publisher:           string;
-    publishedDate:       Date;
+    publishedDate:       string;
     description:         string;
     pageCount:           number;
     dimensions:          Dimensions;
@@ -74,5 +74,14 @@ export interface Item {
 export interface LivrosResultado {
     items: Item[]
     totalItems: number
+}
+
+export interface ImageLinks {
+    smallThumbnail: string;
+    thumbnail:      string;
+    small:          string;
+    medium:         string;
+    large:          string;
+    extraLarge:     string;
 }
 
